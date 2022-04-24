@@ -1,0 +1,29 @@
+{
+  "name": "markdownBlogSite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon server.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geordzNZ/markdownBlogSite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geordzNZ/markdownBlogSite/issues"
+  },
+  "homepage": "https://github.com/geordzNZ/markdownBlogSite#readme",
+  "dependencies": {
+    "ejs": "^3.1.7",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

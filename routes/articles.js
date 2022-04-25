@@ -1,13 +1,14 @@
 const express = require('express')
-const { route } = require('express/lib/application')
 const router = express.Router()
 
 
-router.get('/', (req, res) => {
-    res.send('Hello from Articles')
+router.get('/new', (req, res) => {
+    res.render('articles/new.ejs')
 })
 
-
+router.post('/', (req, res) => {
+    
+})
 
 
 

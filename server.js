@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
         description: 'Minim velit sint esse Lorem commodo aute ipsum est occaecat minim sunt. Voluptate qui id anim est aliquip excepteur pariatur ea cillum ad et culpa. Ex esse enim pariatur aute exercitation culpa consequat. Consectetur minim incididunt incididunt proident elit qui cillum ut sunt ut aliqua.'
     }]
     
-    res.render('index', { articles: articles})
+    res.render('articles/index', { articles: articles})
 })
 
 app.listen(1975)

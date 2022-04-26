@@ -10,10 +10,9 @@
     <title>Blog Site</title>
 </head>
 <body>
-    <!-- <h1>Hello from index.ejs</h1> -->
     <div class="container">
         <h1 class="mb-4">New Article</h1>
-        
+            <%- include('_formfields_NewEdit')  %> 
         <form action="/articles" method="post">
 
         </form>

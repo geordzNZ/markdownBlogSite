@@ -8,7 +8,7 @@ router.get('/new', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-    
+    res.send(req.params.id)
 })
 
 router.post('/', async (req, res) => {

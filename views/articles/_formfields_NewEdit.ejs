@@ -1,14 +1,14 @@
 <div class="mb-4">
     <label for="title" class="form-label"></label>Title</label>
-    <input required value="" type="text" name="title" id="title" class="form-control" >
+    <input required value="<%= article.title %>" type="text" name="title" id="title" class="form-control" >
 </div>
 <div class="mb-4">
     <label for="description" class="form-label">Description</label>
-    <textarea name="description" id="description" class="form-control"></textarea>
+    <textarea name="description" id="description" class="form-control"><%= article.description%></textarea>
 </div>
 <div>
     <label for="markdown" class="form-label">Markdown</label>
-    <textarea name="markdown" id="markddown" class="form-control"></textarea>
+    <textarea name="markdown" id="markddown" class="form-control"><%= article.markddown%></textarea>
 </div>
 
 <a href="/" class="btn btn-secondary mt-3">Cancel</a>

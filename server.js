@@ -2,8 +2,20 @@ const express = require('express')
 const mongoose = require('mongoose')
 const articleRouter = require('./routes/articles')
 const app = express()
+require("dotenv").config()
 
-mongoose.connect('mongodb://localhost/blog')
+
+const portNum = 1975
+// mongoose.connect('mongodb://localhost/blog')
+
+let db,
+    dbConnectionStr = process.env.DB_STRING,
+    dbName = "blog"
+  mongoose.connect(dbConnectionStr, { useUnifiedTopology: true })
+  .then( (client) => {
+  console.log(`Connected to ${dbName} Database`);
+}
+);
 
 
 app.set('view engine', 'ejs')
@@ -27,4 +39,5 @@ app.get('/', (req, res) => {
 
 
 app.use('/articles', articleRouter)
-app.listen(1975)
+app.listen(portNum)
+console.log(`Ready on port ${portNum}`)

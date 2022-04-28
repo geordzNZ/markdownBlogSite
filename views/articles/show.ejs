@@ -10,13 +10,14 @@
     <title>Blog Site</title>
 </head>
 <body class="bg-success p-2 text-dark bg-opacity-25"></body>>
-    <div class="container">
-        <div class="card mt-4 mb-4">
+    <div class="container bg-success p-2 text-dark bg-opacity-10">
+        <div class="card my-4 mx-3">
             <div class="card-body">
-                <h1 class="mb-1"><%= article.title%></h1>
-                <div class="text-muted mb-2"><%= article.createdAt.toLocaleDateString()%></div>
                 <a href="/" class="btn btn-secondary">All Articles</a>
                 <a href="/articles/edit/<%= article.id%>"class="btn btn-info">Edit</a>
+                
+                <h1 class="mt-4 mb-1"><%= article.title%></h1>
+                <div class="text-muted mb-2"><%= article.createdAt.toLocaleDateString()%></div>
             
                 <div class="fst-italic">
                     <%= article.description %>

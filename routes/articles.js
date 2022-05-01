@@ -7,8 +7,8 @@ router.get('/new', (req, res) => {
     res.render('articles/new', { article: new Article() })
 })
 
-router.get('/:id', async (req, res) => {
-    const article = await Article.findById(req.params.id)
+router.get('/:slug', async (req, res) => {
+    const article = await Article.find({ slug: req.params.slug })
     if (article == null) res.redirect('/')
     res.render('articles/show', { article: article })
 })
@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
         // console.log("router.post 3");
         article = await article.save()
         console.log(`Article saved, ID: ${article.id}`);
-        res.redirect(`articles/${article.id}`)
+        res.redirect(`articles/${article.slug}`)
         // console.log("router.post 5");
     } catch (e) {
         console.log("Error posting article");

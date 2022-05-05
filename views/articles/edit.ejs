@@ -17,6 +17,10 @@
             <%- include('_formfields_NewEdit')  %> 
         </form>
 
+        <form action="/articles/<%= article.id %>?_method=DELETE" method="POST" class="d-inline">
+            <button  class="btn btn-danger in mt-2">Delete</button>
+        </form>
+
     </div>
 </body>
 </html>

@@ -12,15 +12,16 @@
 </head>
 <body class="bg-success p-2 text-dark bg-opacity-25">
     <div class="container bg-success p-2 text-dark bg-opacity-10">
-        <h1 class="mb-4 mx-3 my-4">Edit Article</h1>
+        <h1 class="mb-4 mx-3 my-4">Edit Article         <form action="/articles/<%= article.id %>?_method=DELETE" method="POST" class="d-inline">
+            <button  class="btn btn-danger in mt-2"><img src="/images/delete.png" class="delete-btn"></button>
+        </form>
+    </h1>
         
         <form action="/articles/<%= article.id %>?_method=PUT" method="POST">
             <%- include('_formfields_NewEdit')  %> 
         </form>
 
-        <form action="/articles/<%= article.id %>?_method=DELETE" method="POST" class="d-inline">
-            <button  class="btn btn-danger in mt-2"><img src="/images/delete.png" class="delete-btn"></button>
-        </form>
+
 
     </div>
 </body>
